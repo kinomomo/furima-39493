@@ -14,6 +14,7 @@
 
 ### Association
 - has_many :items
+- has_many :orders
 
 ## itemsテーブル
 | Column | Type | Option |
@@ -31,3 +32,29 @@
 
 ### Association
 - belongs_to :user
+- has_one :order
+
+## ordersテーブル
+| Column | Type | Option |
+|-|-|-|
+| user(FK) | references | null: false, foreign_key: true |
+| item(FK) | references | null: false, foreign_key: true |
+
+### Association
+- has_one :address
+- belongs_to :user
+- belongs_to :item
+
+## addressesテーブル
+| Column | Type | Option |
+|-|-|-|
+| pastal_code | string | null: false |
+| prefecture_id | integer | null: false |
+| city | string | null: false |
+| block | string | null: false |
+| building_name | string |
+| phone_number | string | null: false |
+| order(FK) |references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :order
