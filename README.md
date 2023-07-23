@@ -47,7 +47,7 @@
 | pastal_code | integer | null: false |
 | prefecture_id | string | null: false |
 | city | string | null: false |
-| block | integer | null: false |
+| block | string | null: false |
 | building_name | string | null: false |
 | phone_number | integer | null: false |
 | order(FK) |references | null: false, foreign_key: true |
