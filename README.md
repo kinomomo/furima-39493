@@ -42,14 +42,14 @@
 
 ### Association
 - has_one :address
-- has_many :users
-- has_one :item
+- belongs_to :user
+- belongs_to :item
 
 ## addressesテーブル
 | Column | Type | Option |
 |-|-|-|
 | pastal_code | string | null: false |
-| prefecture_id | string | null: false |
+| prefecture_id | integer | null: false |
 | city | string | null: false |
 | block | string | null: false |
 | building_name | string |
