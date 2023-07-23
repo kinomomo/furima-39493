@@ -32,6 +32,7 @@
 
 ### Association
 - belongs_to :user
+- has_one :order
 
 ## ordersテーブル
 | Column | Type | Option |
