@@ -44,7 +44,7 @@
 ## addressesテーブル
 | Column | Type | Option |
 |-|-|-|
-| pastal_code | integer | null: false |
+| pastal_code | string | null: false |
 | prefecture_id | string | null: false |
 | city | string | null: false |
 | block | string | null: false |
