@@ -41,7 +41,9 @@
 | item(FK) | references | null: false, foreign_key: true |
 
 ### Association
-- has_one :addresses
+- has_one :address
+- has_many :users
+- has_one :item
 
 ## addressesテーブル
 | Column | Type | Option |
