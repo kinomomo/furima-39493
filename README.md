@@ -31,3 +31,26 @@
 
 ### Association
 - belongs_to :user
+
+## ordersテーブル
+| Column | Type | Option |
+|-|-|-|
+| user(FK) | references | null: false, foreign_key: true |
+| item(FK) | references | null: false, foreign_key: true |
+
+### Association
+- has_one :addresses
+
+## addressesテーブル
+| Column | Type | Option |
+|-|-|-|
+| pastal_code | integer | null: false |
+| prefectures | string | null: false |
+| city | string | null: false |
+| block | integer | null: false |
+| building_name | string | null: false |
+| phone_number | integer | null: false |
+| order(FK) |references | null: false, foreign_key: true |
+
+### Association
+- belongs_to :order
