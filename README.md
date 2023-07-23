@@ -48,7 +48,7 @@
 | prefecture_id | string | null: false |
 | city | string | null: false |
 | block | string | null: false |
-| building_name | string | null: false |
+| building_name | string |
 | phone_number | integer | null: false |
 | order(FK) |references | null: false, foreign_key: true |
 
