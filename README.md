@@ -45,7 +45,7 @@
 | Column | Type | Option |
 |-|-|-|
 | pastal_code | integer | null: false |
-| prefectures | string | null: false |
+| prefecture_id | string | null: false |
 | city | string | null: false |
 | block | integer | null: false |
 | building_name | string | null: false |
