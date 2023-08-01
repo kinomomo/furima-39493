@@ -16,13 +16,13 @@ RSpec.describe OrderAddress, type: :model do
         @order_address.building_name = ''
         expect(@order_address).to be_valid
       end
-      it "priceとtokenがあれば保存ができること" do
+      it 'priceとtokenがあれば保存ができること' do
         expect(@order_address).to be_valid
       end
     end
 
     context '内容に問題がある場合' do
-      it "tokenが空では登録できないこと" do
+      it 'tokenが空では登録できないこと' do
         @order_address.token = nil
         @order_address.valid?
         expect(@order_address.errors.full_messages).to include("Token can't be blank")
@@ -40,7 +40,7 @@ RSpec.describe OrderAddress, type: :model do
       it 'prefecture_idを選択していないと保存できないこと' do
         @order_address.prefecture_id = 0
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Prefecture must be other than 0")
+        expect(@order_address.errors.full_messages).to include('Prefecture must be other than 0')
       end
       it 'cityが空だと保存できないこと' do
         @order_address.city = ''
@@ -55,7 +55,8 @@ RSpec.describe OrderAddress, type: :model do
       it 'phone_numberが空だと保存できないこと' do
         @order_address.phone_number = ''
         @order_address.valid?
-        expect(@order_address.errors.full_messages).to include("Phone number can't be blank", "Phone number is invalid. Include hyphen(-)")
+        expect(@order_address.errors.full_messages).to include("Phone number can't be blank",
+                                                               'Phone number is invalid. Include hyphen(-)')
       end
       it 'userが紐付いていないと保存できないこと' do
         @order_address.user_id = nil
